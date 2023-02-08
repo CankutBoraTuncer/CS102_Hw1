@@ -133,11 +133,41 @@ public class Hw1 {
         //TODO: Emirhan
     }
 
-    public static String findSumArr(int[] arr) {
-        //TODO: Can
+    /**
+     * Gives the sum of elements with odd numbered indexes and even numbered indexes
+     * seperately.
+     * 
+     * @author Can Tucer
+     * @param arr (array to work on)
+     * @returns string to be printed
+     */
+    public static String findSumArr(int[] arr){
+        // Initial variables to use for calculation:
+        int evenSum = 0;
+        int oddSum = 0;
+
+        for (int i = 0; i < arr.length; i++) { // Iterating through the list.
+
+            if (isEven(i)) {
+                evenSum += arr[i];
+            } else {
+                oddSum += arr[i];
+            }
+
+        }
+
+        String text = String.format("Sum of even numbered indexes: %d%nSum of odd numbered indexes: %d", evenSum, oddSum);
+        return text;
     }
 
-    public static boolean isEven(int i) {
-        //TODO: Can
+    /**
+     * Checks if a number is even.
+     * 
+     * @author Can Tucer
+     * @param i (number to work on)
+     * @returns result boolean
+     */
+    public static boolean isEven(int i){
+        return (i % 2 == 0);
     }
 }
