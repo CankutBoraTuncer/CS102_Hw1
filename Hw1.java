@@ -164,9 +164,25 @@ public class Hw1 {
 		return finalArray;
 	}
 
-    public static String arrayToString(double[] arr) {
-        //TODO: Emirhan
-    }
+    /**
+	 * Converts given array into a string for printing purposes.
+	 * 
+	 * @author 	Emirhan Yagcioglu
+	 * @param 	arr
+	 * @return 	string representation of an array
+	 */
+	public static String arrayToString(double[] arr) {
+		int arrayLength = arr.length;
+		String outString = "{"; // initialize the output string with an opening bracket
+		if (arrayLength != 0) {
+			for (int i = 0; i < arrayLength - 1; i++) {
+				outString += String.format("%.1f, ", arr[i]);	// for all elements, except the last, add "x, " to the string
+			}
+			outString += String.format("%.1f", arr[arrayLength - 1]);	// last element does not have a comma
+		}
+		outString += "}";	// closing bracket
+		return outString;
+	}
 
     /**
      * Gives the sum of elements with odd numbered indexes and even numbered indexes
