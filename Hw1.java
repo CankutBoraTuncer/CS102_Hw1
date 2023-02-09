@@ -121,7 +121,7 @@ public class Hw1 {
         //TODO: Bertan
     }
 
-    /**
+	/**
 	 * Returns the average of all values in a given array.
 	 * The function returns 0 if the given array has no elements.
 	 * 
@@ -164,7 +164,7 @@ public class Hw1 {
 		return finalArray;
 	}
 
-    /**
+	/**
 	 * Converts given array into a string for printing purposes.
 	 * 
 	 * @author 	Emirhan Yagcioglu
