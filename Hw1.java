@@ -121,13 +121,48 @@ public class Hw1 {
         //TODO: Bertan
     }
 
-    public static double findAvgArr(int[] arr) {
-        //TODO: Emirhan
-    }
+    /**
+	 * Returns the average of all values in a given array.
+	 * The function returns 0 if the given array has no elements.
+	 * 
+	 * @author 	Emirhan Yagcioglu
+	 * @param 	arr
+	 * @return 	an integer representing the average of array elements
+	 */
+	public static double findAvgArr(int[] arr) {
+		double average;
+		int sum = 0;
+		int arrayLength = arr.length;
+		if (arrayLength == 0) {
+			return 0;	// if array has zero elements, returns 0
+		}
+		else {
+			for (int i = 0; i < arrayLength; i++) {
+				sum += arr[i]; 	// sum of all elements in the array
+			}
+			average = (double) sum / arrayLength; 	// average of all elements
+			return average;
+		}
+	}
 
-    public static double[] findDiffArr(int[] arr) {
-        //TODO: Emirhan
-    }
+	/**
+	 * Finds the difference between each element of a given array and 
+	 * the average of all values in the array. Returns an array containing
+	 * the difference between the average all elements of the given array.
+	 * 
+	 * @author 	Emirhan Yagcioglu
+	 * @param 	arr
+	 * @return 	an array consisting of each element subtracted from the average
+	 */
+	public static double[] findDiffArr(int[] arr) {
+		int arrayLength = arr.length;
+		double[] finalArray = new double[arrayLength];	// new array with the same length
+		double average = findAvgArr(arr);	// get average of the array
+		for (int i = 0; i < arrayLength; i++) {
+			finalArray[i] = average - arr[i];	// populate new array with values
+		}
+		return finalArray;
+	}
 
     public static String arrayToString(double[] arr) {
         //TODO: Emirhan
