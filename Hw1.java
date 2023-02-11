@@ -112,13 +112,25 @@ public class Hw1 {
         }
         return 0;
     }
-
-    public static int findMinArr(int[] arr) {
-        //TODO: Bertan
+    
+   	public static int findMinArr(int[] arr) {
+    	int min = arr[0];
+		for (int i = 1; i < arr.length; i++) {
+			if (arr[i] < min) {
+				min = arr[i];
+			}
+		}
+		return min;
     }
 
     public static int findMaxArr(int[] arr) {
-        //TODO: Bertan
+         int max = arr[0];
+	 	for (int i = 1; i < arr.length; i++) {
+		 	if (arr[i] > max) {
+			 	max = arr[i];
+		 	}
+		}
+		return max;
     }
 
 	/**
