@@ -1,10 +1,12 @@
 package lab0.CS102_Hw1;
 
+import java.util.Scanner;
+
 /**
  * For this assignment, you are going to create a tiny Java project with a group
  * of 3-5 students.
  * 
- * @authors Cankut Bora Tuncer // TODO: Add your name here
+ * @authors Cankut Bora Tuncer
  * @version
  */
 
@@ -110,7 +112,9 @@ public class Hw1 {
                 System.out.println( "The option you entered is not valid.");
             }
         }
+        input.close();
         return 0;
+        
     }
     
    	public static int findMinArr(int[] arr) {
